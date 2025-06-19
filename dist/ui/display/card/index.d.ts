@@ -1,3 +1,3 @@
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './Card';
-export type { CardProps, CardHeaderProps, CardTitleProps, CardDescriptionProps, CardContentProps, CardFooterProps } from './Card';
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, } from './Card';
+export type { CardProps, CardHeaderProps, CardTitleProps, CardDescriptionProps, CardContentProps, CardFooterProps, } from './Card';
 //# sourceMappingURL=index.d.ts.map

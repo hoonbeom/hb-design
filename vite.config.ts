@@ -12,10 +12,16 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: {
+        index: resolve(__dirname, "src/index.ts"),
+        "ui/input": resolve(__dirname, "src/ui/input/index.ts"),
+        "ui/feedback": resolve(__dirname, "src/ui/feedback/index.ts"),
+        "ui/display": resolve(__dirname, "src/ui/display/index.ts"),
+        "ui/navigation": resolve(__dirname, "src/ui/navigation/index.ts"),
+      },
       name: "hb-design",
       formats: ["es", "cjs"],
-      fileName: (format) => `index.${format === "es" ? "mjs" : "js"}`,
+      fileName: (format, entryName) => `${entryName}.${format === "es" ? "mjs" : "js"}`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
