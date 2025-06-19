@@ -3,4 +3,4 @@ export { cn } from './lib/utils';
 
 // UI Components
 
-export * from './ui';
+export * as ui from './ui';
