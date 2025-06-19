@@ -1,28 +1,52 @@
+// import {
+//   Button,
+//   Input,
+//   Select,
+//   Card,
+//   CardHeader,
+//   CardTitle,
+//   CardDescription,
+//   CardContent,
+//   Badge,
+//   Avatar,
+//   Alert,
+//   Spinner,
+//   Heading,
+//   Text,
+//   Icon,
+//   Tooltip,
+//   Tabs,
+//   TabList,
+//   Tab,
+//   TabPanels,
+//   TabPanel,
+//   Dropdown,
+//   DropdownItem,
+// } from './index';
+
 import {
-  Button,
-  Input,
-  Select,
+  Avatar,
+  Badge,
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-  Badge,
-  Avatar,
-  Alert,
-  Spinner,
   Heading,
-  Text,
   Icon,
-  Tooltip,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
+  Text,
+} from './ui/display';
+import { Alert, Spinner, Tooltip } from './ui/feedback';
+import { Button, Input, Select } from './ui/input';
+import {
   Dropdown,
   DropdownItem,
-} from './index';
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from './ui/navigation';
 
 function App() {
   const selectOptions = [
