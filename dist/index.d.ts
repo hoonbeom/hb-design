@@ -1,6 +1,3 @@
 export { cn } from './lib/utils';
-export * from './ui/display';
-export * from './ui/feedback';
-export * from './ui/input';
-export * from './ui/navigation';
+export * from './ui';
 //# sourceMappingURL=index.d.ts.map
