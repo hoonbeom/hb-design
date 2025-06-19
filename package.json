@@ -1,10 +1,14 @@
 {
-  "name": "@hb-design/ui",
+  "name": "hb-design",
   "version": "0.1.0",
   "description": "A modern design system built with Tailwind CSS and Vite",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoonbeom/hb-design.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -30,8 +34,7 @@
       "import": "./dist/ui/navigation/*.mjs",
       "require": "./dist/ui/navigation/*.js",
       "types": "./dist/ui/navigation/*.d.ts"
-    },
-    "./styles": "./dist/styles.css"
+    }
   },
   "files": [
     "dist"
