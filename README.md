@@ -1,14 +1,15 @@
 # HB Design System
 
-A modern, accessible design system built with React, TypeScript, and Tailwind CSS.
+A modern, accessible design system built with React, TypeScript, and Tailwind CSS. Inspired by Radix UI, this library provides a comprehensive set of reusable UI components for building beautiful and consistent user interfaces.
 
 ## Features
 
-- 🎨 **Modern Design**: Clean, accessible components with consistent styling
-- ⚡ **TypeScript**: Full TypeScript support with proper type definitions
-- 🎯 **Tailwind CSS**: Built on Tailwind CSS for consistent design tokens
-- 📦 **Tree Shaking**: Optimized bundle size with proper exports
-- 🚀 **Vite**: Fast build system with hot module replacement
+- 🎨 **Modern Design**: Clean, accessible components built with Tailwind CSS
+- ⚡ **TypeScript**: Full TypeScript support with excellent type safety
+- 🔧 **Flexible**: Customizable components with comprehensive props
+- 📦 **Tree-shakable**: Import only what you need to keep your bundle size minimal
+- 🚀 **Fast**: Built with Vite for optimal development and build performance
+- 🎯 **Accessible**: Components follow accessibility best practices
 
 ## Installation
 
@@ -16,187 +17,113 @@ A modern, accessible design system built with React, TypeScript, and Tailwind CS
 npm install @hb-design/ui
 ```
 
-## Usage
-
-### Basic Setup
-
-First, install the package and its peer dependencies:
-
-```bash
-npm install @hb-design/ui react react-dom
-```
-
-### Import Components
+## Quick Start
 
 ```tsx
-import { Button, Input, Card, Badge } from '@hb-design/ui'
+import { Button } from '@hb-design/ui/ui/input/button'
+import { Card } from '@hb-design/ui/ui/display/card'
+import { Input } from '@hb-design/ui/ui/input/input'
 
 function App() {
   return (
-    <div className="p-4">
-      <Card>
-        <Card.Header>
-          <Card.Title>Welcome</Card.Title>
-          <Card.Description>This is a sample card</Card.Description>
-        </Card.Header>
-        <Card.Content>
-          <Input label="Email" placeholder="Enter your email" />
-          <Button variant="primary" className="mt-4">
-            Submit
-          </Button>
-        </Card.Content>
-      </Card>
-    </div>
+    <Card>
+      <Input placeholder="Enter your name" />
+      <Button variant="primary">Submit</Button>
+    </Card>
   )
 }
 ```
 
-### Import Styles
+## Component Categories
 
-Make sure to import the CSS file in your main application file:
+### Input Components
+Components for user input and interaction.
+
+- **Button** - Versatile button component with multiple variants
+- **Input** - Text input field with validation states
+- **Select** - Dropdown selection component
 
 ```tsx
-import '@hb-design/ui/styles'
+import { Button } from '@hb-design/ui/ui/input/button'
+import { Input } from '@hb-design/ui/ui/input/input'
+import { Select } from '@hb-design/ui/ui/input/select'
 ```
 
-## Components
+### Display Components
+Components for displaying content and information.
 
-### Button
+- **Avatar** - User profile pictures and initials
+- **Badge** - Status indicators and labels
+- **Card** - Content containers with various styles
+- **Icon** - Icon component system
+- **Typography** - Text components (Heading, Text)
 
 ```tsx
-import { Button } from '@hb-design/ui'
-
-// Variants
-<Button variant="primary">Primary</Button>
-<Button variant="secondary">Secondary</Button>
-<Button variant="outline">Outline</Button>
-<Button variant="ghost">Ghost</Button>
-<Button variant="danger">Danger</Button>
-
-// Sizes
-<Button size="sm">Small</Button>
-<Button size="md">Medium</Button>
-<Button size="lg">Large</Button>
-
-// Loading state
-<Button loading>Loading...</Button>
+import { Avatar } from '@hb-design/ui/ui/display/avatar'
+import { Badge } from '@hb-design/ui/ui/display/badge'
+import { Card } from '@hb-design/ui/ui/display/card'
+import { Heading, Text } from '@hb-design/ui/ui/display/typography'
 ```
 
-### Input
+### Feedback Components
+Components for providing user feedback and status information.
+
+- **Alert** - Error and success messages
+- **Modal** - Dialog and modal windows
+- **Spinner** - Loading indicators
+- **Tooltip** - Contextual help and information
 
 ```tsx
-import { Input } from '@hb-design/ui'
-
-<Input label="Email" placeholder="Enter your email" />
-<Input label="Password" type="password" error="Password is required" />
-<Input label="Username" helperText="Choose a unique username" />
+import { Alert } from '@hb-design/ui/ui/feedback/error'
+import { Modal } from '@hb-design/ui/ui/feedback/dialog'
+import { Spinner } from '@hb-design/ui/ui/feedback/loading'
+import { Tooltip } from '@hb-design/ui/ui/feedback/tooltip'
 ```
 
-### Card
+### Navigation Components
+Components for navigation and menu systems.
+
+- **Dropdown** - Dropdown menus and selectors
+- **Tabs** - Tabbed interface components
 
 ```tsx
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@hb-design/ui'
-
-<Card>
-  <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card description</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Card content goes here</p>
-  </CardContent>
-  <CardFooter>
-    <Button>Action</Button>
-  </CardFooter>
-</Card>
+import { Dropdown } from '@hb-design/ui/ui/navigation/dropdown'
+import { Tabs } from '@hb-design/ui/ui/navigation/tabs'
 ```
 
-### Badge
+## Import Patterns
 
+You can import components in several ways:
+
+### Individual Components (Recommended)
 ```tsx
-import { Badge } from '@hb-design/ui'
-
-<Badge variant="primary">Primary</Badge>
-<Badge variant="success">Success</Badge>
-<Badge variant="warning">Warning</Badge>
-<Badge variant="danger">Danger</Badge>
+import { Button } from '@hb-design/ui/ui/input/button'
+import { Card } from '@hb-design/ui/ui/display/card'
 ```
 
-### Avatar
-
+### Category Imports
 ```tsx
-import { Avatar } from '@hb-design/ui'
-
-<Avatar src="/path/to/image.jpg" alt="User" />
-<Avatar alt="John Doe" /> {/* Shows initials */}
-<Avatar size="lg" alt="User" />
+import { Button, Input, Select } from '@hb-design/ui/ui/input'
+import { Card, Badge, Avatar } from '@hb-design/ui/ui/display'
 ```
 
-### Modal
-
+### All Components
 ```tsx
-import { Modal } from '@hb-design/ui'
-
-const [isOpen, setIsOpen] = useState(false)
-
-<Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-  <h2>Modal Title</h2>
-  <p>Modal content goes here</p>
-  <Button onClick={() => setIsOpen(false)}>Close</Button>
-</Modal>
+import { Button, Card, Input, Badge } from '@hb-design/ui'
 ```
 
-### Dropdown
+## Styling
 
-```tsx
-import { Dropdown, DropdownItem } from '@hb-design/ui'
+The design system uses Tailwind CSS for styling. Make sure you have Tailwind CSS installed in your project:
 
-<Dropdown trigger={<Button>Open Menu</Button>}>
-  <DropdownItem onClick={() => console.log('Item 1')}>
-    Item 1
-  </DropdownItem>
-  <DropdownItem onClick={() => console.log('Item 2')}>
-    Item 2
-  </DropdownItem>
-</Dropdown>
+```bash
+npm install tailwindcss
 ```
 
-### Tabs
+Include the design system styles in your CSS:
 
-```tsx
-import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@hb-design/ui'
-
-<Tabs>
-  <TabList>
-    <Tab>Tab 1</Tab>
-    <Tab>Tab 2</Tab>
-  </TabList>
-  <TabPanels>
-    <TabPanel>Content 1</TabPanel>
-    <TabPanel>Content 2</TabPanel>
-  </TabPanels>
-</Tabs>
-```
-
-### Alert
-
-```tsx
-import { Alert } from '@hb-design/ui'
-
-<Alert variant="info">This is an info message</Alert>
-<Alert variant="success">This is a success message</Alert>
-<Alert variant="warning">This is a warning message</Alert>
-<Alert variant="error">This is an error message</Alert>
-```
-
-### Spinner
-
-```tsx
-import { Spinner } from '@hb-design/ui'
-
-<Spinner size="sm" />
-<Spinner size="md" />
-<Spinner size="lg" color="primary" />
+```css
+@import '@hb-design/ui/styles';
 ```
 
 ## Development
@@ -218,9 +145,37 @@ import { Spinner } from '@hb-design/ui'
 
 - `npm run dev` - Start development server
 - `npm run build` - Build the library
-- `npm run preview` - Preview the build
 - `npm run type-check` - Run TypeScript type checking
 - `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
+
+### Project Structure
+
+```
+src/
+├── ui/
+│   ├── input/          # Input components
+│   │   ├── button/
+│   │   ├── input/
+│   │   └── select/
+│   ├── display/        # Display components
+│   │   ├── avatar/
+│   │   ├── badge/
+│   │   ├── card/
+│   │   ├── icon/
+│   │   └── typography/
+│   ├── feedback/       # Feedback components
+│   │   ├── dialog/
+│   │   ├── error/
+│   │   ├── loading/
+│   │   └── tooltip/
+│   └── navigation/     # Navigation components
+│       ├── dropdown/
+│       └── tabs/
+├── lib/                # Utility functions
+└── styles.css          # Global styles
+```
 
 ## Contributing
 
@@ -228,54 +183,13 @@ import { Spinner } from '@hb-design/ui'
 2. Create a feature branch
 3. Make your changes
 4. Add tests if applicable
-5. Submit a pull request
+5. Run the build and lint commands
+6. Submit a pull request
 
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Design Tokens
+## Support
 
-The design system uses a consistent set of design tokens:
-
-### Colors
-
-- **Primary**: Blue scale (50-900)
-- **Gray**: Neutral gray scale (50-900)
-- **Success**: Green scale
-- **Warning**: Yellow scale
-- **Error**: Red scale
-
-### Spacing
-
-- Consistent spacing scale based on Tailwind's spacing system
-- Custom spacing values: `18` (4.5rem), `88` (22rem)
-
-### Typography
-
-- **Font Family**: Inter (with system fallbacks)
-- **Font Sizes**: Tailwind's text scale
-- **Font Weights**: 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
-
-### Shadows
-
-- **Soft**: Subtle elevation
-- **Medium**: Standard elevation
-- **Large**: High elevation
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Accessibility
-
-All components are built with accessibility in mind:
-
-- Proper ARIA attributes
-- Keyboard navigation support
-- Focus management
-- Screen reader compatibility
-- Color contrast compliance 
+For questions and support, please open an issue on GitHub. 
