@@ -1,25 +1,17 @@
+
 /**
  * UI Components
  *
  * @example
- * ```tsx
- * import { UI } from 'hb-design';
- *
- * // Use display components
- * <UI.display.Avatar />
- *
- * // Use input components
- * <UI.input.Button />
- *
- * // Use feedback components
- * <UI.feedback.Modal />
- *
- * // Use navigation components
- * <UI.navigation.Dropdown />
- * ```
+ * import { display } from 'hb-design/ui/display';
+ * import { input } from 'hb-design/ui/input';
+ * import { feedback } from 'hb-design/ui/feedback';
+ * import { navigation } from 'hb-design/ui/navigation';
  */
-export * as display from './display';
-export * as input from './input';
-export * as feedback from './feedback';
-export * as navigation from './navigation';
-//# sourceMappingURL=index.d.ts.map
+
+import * as display from './display';
+import * as input from './input';
+import * as feedback from './feedback';
+import * as navigation from './navigation';
+
+export { display, input, feedback, navigation };

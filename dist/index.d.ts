@@ -1,5 +1,6 @@
+
 // Utils
-export { cn } from './lib/utils';
+export declare function cn(...inputs: any[]): string;
 
 // UI Components
 import * as display from './ui/display';
@@ -14,7 +15,6 @@ export const UI: {
   readonly navigation: typeof navigation;
 };
 
-// Re-export for direct access
 export { display, input, feedback, navigation };
 
 import { default as default_2 } from 'react';

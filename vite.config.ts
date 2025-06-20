@@ -13,35 +13,64 @@ export default defineConfig({
       include: ['src/**/*'],
       exclude: ['src/**/*.test.*', 'src/**/*.spec.*'],
       beforeWriteFile: (filePath, content) => {
-        // Ensure proper exports in main index.d.ts
+        // Main index.d.ts
         if (
           filePath.endsWith('index.d.ts') &&
           filePath.includes('dist/index.d.ts')
         ) {
           return {
             filePath,
-            content: `// Utils
-                      export { cn } from './lib/utils';
+            content: `
+// Utils
+export declare function cn(...inputs: any[]): string;
 
-                      // UI Components
-                      import * as display from './ui/display';
-                      import * as input from './ui/input';
-                      import * as feedback from './ui/feedback';
-                      import * as navigation from './ui/navigation';
+// UI Components
+import * as display from './ui/display';
+import * as input from './ui/input';
+import * as feedback from './ui/feedback';
+import * as navigation from './ui/navigation';
 
-                      export const UI: {
-                        readonly display: typeof display;
-                        readonly input: typeof input;
-                        readonly feedback: typeof feedback;
-                        readonly navigation: typeof navigation;
-                      };
+export const UI: {
+  readonly display: typeof display;
+  readonly input: typeof input;
+  readonly feedback: typeof feedback;
+  readonly navigation: typeof navigation;
+};
 
-                      // Re-export for direct access
-                      export { display, input, feedback, navigation };
+export { display, input, feedback, navigation };
 
-                      ${content}`,
+${content}`,
           };
         }
+        
+        // UI index.d.ts
+        if (
+          filePath.endsWith('index.d.ts') &&
+          filePath.includes('dist/ui/index.d.ts')
+        ) {
+          return {
+            filePath,
+            content: `
+/**
+ * UI Components
+ *
+ * @example
+ * import { display } from 'hb-design/ui/display';
+ * import { input } from 'hb-design/ui/input';
+ * import { feedback } from 'hb-design/ui/feedback';
+ * import { navigation } from 'hb-design/ui/navigation';
+ */
+
+import * as display from './display';
+import * as input from './input';
+import * as feedback from './feedback';
+import * as navigation from './navigation';
+
+export { display, input, feedback, navigation };
+`,
+          };
+        }
+        
         return { filePath, content };
       },
     }),
