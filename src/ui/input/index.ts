@@ -1,3 +1,3 @@
-export * from './button';
-export * from './input';
-export * from './select';
+export * as Button from './button';
+export * as Input from './input';
+export * as Select from './select';
