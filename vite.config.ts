@@ -21,7 +21,6 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        // index: resolve(__dirname, 'src/index.ts'),
         'ui/index': resolve(__dirname, 'src/ui/index.ts'),
         'display/index': resolve(__dirname, 'src/ui/display/index.ts'),
         'inputs/index': resolve(__dirname, 'src/ui/inputs/index.ts'),
@@ -40,8 +39,6 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
-        // preserveModules: true,
-        // preserveModulesRoot: 'src',
       },
     },
   },
