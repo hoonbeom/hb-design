@@ -24,6 +24,10 @@
 //   DropdownItem,
 // } from './index';
 
+import { Heading, Text } from './ui/display';
+
+import { Badge } from './ui/display';
+
 function App() {
   // const selectOptions = [
   //   { value: 'option1', label: 'Option 1' },
@@ -32,7 +36,10 @@ function App() {
   // ];
 
   return (
-    <>A modern design system built with React, TypeScript, and Tailwind CSS</>
+    <>
+      <Heading level={1}>Heading 1</Heading>
+      <Text variant="large">Large text</Text>
+    </>
   );
 
   // return (

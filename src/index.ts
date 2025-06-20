@@ -21,4 +21,17 @@
 export { cn } from './lib/utils';
 
 // UI Components
-export * as UI from './ui';
+import * as display from './ui/display';
+import * as input from './ui/input';
+import * as feedback from './ui/feedback';
+import * as navigation from './ui/navigation';
+
+export const UI = {
+  display,
+  input,
+  feedback,
+  navigation,
+} as const;
+
+// Re-export for direct access
+export { display, input, feedback, navigation };

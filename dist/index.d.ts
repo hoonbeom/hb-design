@@ -1,3 +1,22 @@
+// Utils
+export { cn } from './lib/utils';
+
+// UI Components
+import * as display from './ui/display';
+import * as input from './ui/input';
+import * as feedback from './ui/feedback';
+import * as navigation from './ui/navigation';
+
+export const UI: {
+  readonly display: typeof display;
+  readonly input: typeof input;
+  readonly feedback: typeof feedback;
+  readonly navigation: typeof navigation;
+};
+
+// Re-export for direct access
+export { display, input, feedback, navigation };
+
 import { default as default_2 } from 'react';
 import { JSX as JSX_2 } from 'react/jsx-runtime';
 

@@ -187,5 +187,5 @@ export {
   x as M,
   b as S,
   g as T,
-  S as i
+  S as f
 };

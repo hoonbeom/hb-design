@@ -12,34 +12,34 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./ui": {
+      "types": "./dist/ui/index.d.ts",
       "import": "./dist/ui/index.mjs",
-      "require": "./dist/ui/index.js",
-      "types": "./dist/ui/index.d.ts"
+      "require": "./dist/ui/index.js"
     },
     "./ui/display": {
+      "types": "./dist/ui/display/index.d.ts",
       "import": "./dist/ui/display/index.mjs",
-      "require": "./dist/ui/display/index.js",
-      "types": "./dist/ui/display/index.d.ts"
+      "require": "./dist/ui/display/index.js"
     },
     "./ui/input": {
+      "types": "./dist/ui/input/index.d.ts",
       "import": "./dist/ui/input/index.mjs",
-      "require": "./dist/ui/input/index.js",
-      "types": "./dist/ui/input/index.d.ts"
+      "require": "./dist/ui/input/index.js"
     },
     "./ui/feedback": {
+      "types": "./dist/ui/feedback/index.d.ts",
       "import": "./dist/ui/feedback/index.mjs",
-      "require": "./dist/ui/feedback/index.js",
-      "types": "./dist/ui/feedback/index.d.ts"
+      "require": "./dist/ui/feedback/index.js"
     },
     "./ui/navigation": {
+      "types": "./dist/ui/navigation/index.d.ts",
       "import": "./dist/ui/navigation/index.mjs",
-      "require": "./dist/ui/navigation/index.js",
-      "types": "./dist/ui/navigation/index.d.ts"
+      "require": "./dist/ui/navigation/index.js"
     }
   },
   "files": [

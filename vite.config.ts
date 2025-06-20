@@ -12,6 +12,38 @@ export default defineConfig({
       copyDtsFiles: true,
       include: ['src/**/*'],
       exclude: ['src/**/*.test.*', 'src/**/*.spec.*'],
+      beforeWriteFile: (filePath, content) => {
+        // Ensure proper exports in main index.d.ts
+        if (
+          filePath.endsWith('index.d.ts') &&
+          filePath.includes('dist/index.d.ts')
+        ) {
+          return {
+            filePath,
+            content: `// Utils
+                      export { cn } from './lib/utils';
+
+                      // UI Components
+                      import * as display from './ui/display';
+                      import * as input from './ui/input';
+                      import * as feedback from './ui/feedback';
+                      import * as navigation from './ui/navigation';
+
+                      export const UI: {
+                        readonly display: typeof display;
+                        readonly input: typeof input;
+                        readonly feedback: typeof feedback;
+                        readonly navigation: typeof navigation;
+                      };
+
+                      // Re-export for direct access
+                      export { display, input, feedback, navigation };
+
+                      ${content}`,
+          };
+        }
+        return { filePath, content };
+      },
     }),
   ],
   build: {
