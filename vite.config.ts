@@ -14,6 +14,11 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
+        'ui/index': resolve(__dirname, 'src/ui/index.ts'),
+        'ui/input/index': resolve(__dirname, 'src/ui/input/index.ts'),
+        'ui/feedback/index': resolve(__dirname, 'src/ui/feedback/index.ts'),
+        'ui/display/index': resolve(__dirname, 'src/ui/display/index.ts'),
+        'ui/navigation/index': resolve(__dirname, 'src/ui/navigation/index.ts'),
       },
       name: 'hb-design',
       formats: ['es', 'cjs'],
