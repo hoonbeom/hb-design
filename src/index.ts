@@ -20,18 +20,25 @@
 // Utils
 export { cn } from './lib/utils';
 
-// UI Components
-import * as display from './ui/display';
-import * as input from './ui/input';
-import * as feedback from './ui/feedback';
-import * as navigation from './ui/navigation';
+// Display Components
+export { Avatar } from './ui/display/avatar';
+export { Badge } from './ui/display/badge';
+export { Card } from './ui/display/card';
+export { Heading } from './ui/display/heading';
+export { Icon } from './ui/display/icon';
+export { Text } from './ui/display/text';
 
-export const UI = {
-  display,
-  input,
-  feedback,
-  navigation,
-} as const;
+// Input Components
+export { Button } from './ui/inputs/button';
+export { Input } from './ui/inputs/input';
+export { Select } from './ui/inputs/select';
 
-// Re-export for direct access
-export { display, input, feedback, navigation };
+// Feedback Components
+export { Alert } from './ui/feedback/alert';
+export { Modal } from './ui/feedback/modal';
+export { Spinner } from './ui/feedback/spinner';
+export { Tooltip } from './ui/feedback/tooltip';
+
+// Navigation Components
+export { Dropdown, DropdownItem } from './ui/navigation/dropdown';
+export { Tabs, TabList, Tab, TabPanels, TabPanel } from './ui/navigation/tabs';

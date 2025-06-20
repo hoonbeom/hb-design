@@ -6,65 +6,11 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hoonbeom/hb-design.git"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
-    },
-    "./ui": {
-      "types": "./dist/ui/index.d.ts",
-      "import": "./dist/ui/index.mjs",
-      "require": "./dist/ui/index.js"
-    },
-    "./ui/": {
-      "types": "./dist/ui/index.d.ts",
-      "import": "./dist/ui/index.mjs",
-      "require": "./dist/ui/index.js"
-    },
-    "./ui/display": {
-      "types": "./dist/ui/display/index.d.ts",
-      "import": "./dist/ui/display/index.mjs",
-      "require": "./dist/ui/display/index.js"
-    },
-    "./ui/display/": {
-      "types": "./dist/ui/display/index.d.ts",
-      "import": "./dist/ui/display/index.mjs",
-      "require": "./dist/ui/display/index.js"
-    },
-    "./ui/input": {
-      "types": "./dist/ui/input/index.d.ts",
-      "import": "./dist/ui/input/index.mjs",
-      "require": "./dist/ui/input/index.js"
-    },
-    "./ui/input/": {
-      "types": "./dist/ui/input/index.d.ts",
-      "import": "./dist/ui/input/index.mjs",
-      "require": "./dist/ui/input/index.js"
-    },
-    "./ui/feedback": {
-      "types": "./dist/ui/feedback/index.d.ts",
-      "import": "./dist/ui/feedback/index.mjs",
-      "require": "./dist/ui/feedback/index.js"
-    },
-    "./ui/feedback/": {
-      "types": "./dist/ui/feedback/index.d.ts",
-      "import": "./dist/ui/feedback/index.mjs",
-      "require": "./dist/ui/feedback/index.js"
-    },
-    "./ui/navigation": {
-      "types": "./dist/ui/navigation/index.d.ts",
-      "import": "./dist/ui/navigation/index.mjs",
-      "require": "./dist/ui/navigation/index.js"
-    },
-    "./ui/navigation/": {
-      "types": "./dist/ui/navigation/index.d.ts",
-      "import": "./dist/ui/navigation/index.mjs",
-      "require": "./dist/ui/navigation/index.js"
     }
   },
   "files": [
@@ -73,11 +19,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "type-check": "tsc --noEmit",
-    "lint": "eslint src --ext .ts,.tsx",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
+    "preview": "vite preview"
   },
   "keywords": [
     "design-system",

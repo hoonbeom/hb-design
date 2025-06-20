@@ -12,88 +12,14 @@ export default defineConfig({
       copyDtsFiles: true,
       include: ['src/**/*'],
       exclude: ['src/**/*.test.*', 'src/**/*.spec.*'],
-      beforeWriteFile: (filePath, content) => {
-        // Main index.d.ts
-        if (
-          filePath.endsWith('index.d.ts') &&
-          filePath.includes('dist/index.d.ts')
-        ) {
-          return {
-            filePath,
-            content: `
-// Utils
-export declare function cn(...inputs: any[]): string;
-
-// UI Components
-import * as display from './ui/display';
-import * as input from './ui/input';
-import * as feedback from './ui/feedback';
-import * as navigation from './ui/navigation';
-
-export const UI: {
-  readonly display: typeof display;
-  readonly input: typeof input;
-  readonly feedback: typeof feedback;
-  readonly navigation: typeof navigation;
-};
-
-export { display, input, feedback, navigation };
-
-${content}`,
-          };
-        }
-        
-        // UI index.d.ts
-        if (
-          filePath.endsWith('index.d.ts') &&
-          filePath.includes('dist/ui/index.d.ts')
-        ) {
-          return {
-            filePath,
-            content: `
-/**
- * UI Components
- *
- * @example
- * import { display } from 'hb-design/ui/display';
- * import { input } from 'hb-design/ui/input';
- * import { feedback } from 'hb-design/ui/feedback';
- * import { navigation } from 'hb-design/ui/navigation';
- */
-
-// Re-export sub-modules for better IDE support
-export * from './display';
-export * from './input';
-export * from './feedback';
-export * from './navigation';
-
-// Also export as namespaces for backward compatibility
-export * as display from './display';
-export * as input from './input';
-export * as feedback from './feedback';
-export * as navigation from './navigation';
-`,
-          };
-        }
-        
-        return { filePath, content };
-      },
     }),
   ],
   build: {
     lib: {
-      entry: {
-        index: resolve(__dirname, 'src/index.ts'),
-        'ui/index': resolve(__dirname, 'src/ui/index.ts'),
-        'ui/input/index': resolve(__dirname, 'src/ui/input/index.ts'),
-        'ui/feedback/index': resolve(__dirname, 'src/ui/feedback/index.ts'),
-        'ui/display/index': resolve(__dirname, 'src/ui/display/index.ts'),
-        'ui/navigation/index': resolve(__dirname, 'src/ui/navigation/index.ts'),
-      },
+      entry: resolve(__dirname, 'src/index.ts'),
       name: 'hb-design',
       formats: ['es', 'cjs'],
-      fileName: (format, entryName) =>
-        `${entryName}.${format === 'es' ? 'mjs' : 'js'}`,
+      fileName: (format) => `index.${format === 'es' ? 'mjs' : 'js'}`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
