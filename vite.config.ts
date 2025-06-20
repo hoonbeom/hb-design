@@ -23,8 +23,15 @@ export default defineConfig({
       entry: {
         // index: resolve(__dirname, 'src/index.ts'),
         'ui/index': resolve(__dirname, 'src/ui/index.ts'),
+        'display/index': resolve(__dirname, 'src/ui/display/index.ts'),
+        'inputs/index': resolve(__dirname, 'src/ui/inputs/index.ts'),
+        'feedback/index': resolve(__dirname, 'src/ui/feedback/index.ts'),
+        'navigation/index': resolve(__dirname, 'src/ui/navigation/index.ts'),
       },
-      formats: ['es'],
+      formats: ['es', 'cjs'],
+      fileName: (format, entryName) => {
+        return `${entryName}.${format === 'es' ? 'mjs' : 'js'}`;
+      },
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -33,8 +40,8 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
-        preserveModules: true,
-        preserveModulesRoot: 'src',
+        // preserveModules: true,
+        // preserveModulesRoot: 'src',
       },
     },
   },

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A modern design system built with Tailwind CSS and Vite",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "type": "module",
   "exports": {
     ".": {
@@ -16,19 +16,19 @@
     },
     "./display": {
       "types": "./dist/ui/display/index.d.ts",
-      "import": "./dist/ui/display/index.js"
+      "import": "./dist/display/index.js"
     },
     "./inputs": {
       "types": "./dist/ui/inputs/index.d.ts",
-      "import": "./dist/ui/inputs/index.js"
+      "import": "./dist/inputs/index.js"
     },
     "./feedback": {
       "types": "./dist/ui/feedback/index.d.ts",
-      "import": "./dist/ui/feedback/index.js"
+      "import": "./dist/feedback/index.js"
     },
     "./navigation": {
       "types": "./dist/ui/navigation/index.d.ts",
-      "import": "./dist/ui/navigation/index.js"
+      "import": "./dist/navigation/index.js"
     }
   },
   "files": [
