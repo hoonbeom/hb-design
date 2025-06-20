@@ -1,4 +1,4 @@
-import { j as r, c as i } from "./jsx-runtime-11ecb8bd.mjs";
+import { j as r, c as i } from "./jsx-runtime-11ecb8bd.js";
 const j = {
   sm: "h-8 w-8",
   md: "h-10 w-10",

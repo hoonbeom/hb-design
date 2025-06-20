@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoonbeom/hb-design.git"
@@ -55,7 +56,10 @@
   },
   "keywords": [
     "design-system",
-    "ui"
+    "ui",
+    "react",
+    "typescript",
+    "tailwindcss"
   ],
   "author": "hoonbeom",
   "license": "MIT",

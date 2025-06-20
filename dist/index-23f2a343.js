@@ -1,4 +1,4 @@
-import { j as e, c } from "./jsx-runtime-11ecb8bd.mjs";
+import { j as e, c } from "./jsx-runtime-11ecb8bd.js";
 const y = {
   primary: "bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500",
   secondary: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500",
