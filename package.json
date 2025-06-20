@@ -21,7 +21,17 @@
       "import": "./dist/ui/index.mjs",
       "require": "./dist/ui/index.js"
     },
+    "./ui/": {
+      "types": "./dist/ui/index.d.ts",
+      "import": "./dist/ui/index.mjs",
+      "require": "./dist/ui/index.js"
+    },
     "./ui/display": {
+      "types": "./dist/ui/display/index.d.ts",
+      "import": "./dist/ui/display/index.mjs",
+      "require": "./dist/ui/display/index.js"
+    },
+    "./ui/display/": {
       "types": "./dist/ui/display/index.d.ts",
       "import": "./dist/ui/display/index.mjs",
       "require": "./dist/ui/display/index.js"
@@ -31,12 +41,27 @@
       "import": "./dist/ui/input/index.mjs",
       "require": "./dist/ui/input/index.js"
     },
+    "./ui/input/": {
+      "types": "./dist/ui/input/index.d.ts",
+      "import": "./dist/ui/input/index.mjs",
+      "require": "./dist/ui/input/index.js"
+    },
     "./ui/feedback": {
       "types": "./dist/ui/feedback/index.d.ts",
       "import": "./dist/ui/feedback/index.mjs",
       "require": "./dist/ui/feedback/index.js"
     },
+    "./ui/feedback/": {
+      "types": "./dist/ui/feedback/index.d.ts",
+      "import": "./dist/ui/feedback/index.mjs",
+      "require": "./dist/ui/feedback/index.js"
+    },
     "./ui/navigation": {
+      "types": "./dist/ui/navigation/index.d.ts",
+      "import": "./dist/ui/navigation/index.mjs",
+      "require": "./dist/ui/navigation/index.js"
+    },
+    "./ui/navigation/": {
       "types": "./dist/ui/navigation/index.d.ts",
       "import": "./dist/ui/navigation/index.mjs",
       "require": "./dist/ui/navigation/index.js"

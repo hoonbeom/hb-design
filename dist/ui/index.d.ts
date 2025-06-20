@@ -9,9 +9,14 @@
  * import { navigation } from 'hb-design/ui/navigation';
  */
 
-import * as display from './display';
-import * as input from './input';
-import * as feedback from './feedback';
-import * as navigation from './navigation';
+// Re-export sub-modules for better IDE support
+export * from './display';
+export * from './input';
+export * from './feedback';
+export * from './navigation';
 
-export { display, input, feedback, navigation };
+// Also export as namespaces for backward compatibility
+export * as display from './display';
+export * as input from './input';
+export * as feedback from './feedback';
+export * as navigation from './navigation';
