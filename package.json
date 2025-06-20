@@ -44,7 +44,6 @@
   "files": [
     "dist"
   ],
-  "sideEffects": false,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -56,13 +55,9 @@
   },
   "keywords": [
     "design-system",
-    "ui",
-    "components",
-    "tailwindcss",
-    "react",
-    "typescript"
+    "ui"
   ],
-  "author": "HB Design Team",
+  "author": "hoonbeom",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.0.0",
@@ -91,14 +86,5 @@
   "dependencies": {
     "clsx": "^2.0.0",
     "tailwind-merge": "^2.0.0"
-  },
-  "typesVersions": {
-    "*": {
-      "ui": ["dist/types/hb-design-ui-modules.d.ts", "dist/ui/index.d.ts"],
-      "ui/display": ["dist/types/hb-design-ui-modules.d.ts", "dist/ui/display/index.d.ts"],
-      "ui/input": ["dist/types/hb-design-ui-modules.d.ts", "dist/ui/input/index.d.ts"],
-      "ui/feedback": ["dist/types/hb-design-ui-modules.d.ts", "dist/ui/feedback/index.d.ts"],
-      "ui/navigation": ["dist/types/hb-design-ui-modules.d.ts", "dist/ui/navigation/index.d.ts"]
-    }
   }
 }
