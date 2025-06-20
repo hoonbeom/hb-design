@@ -1,7 +1,7 @@
-export { Avatar } from './avatar';
-export { Badge } from './badge';
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './card';
-export { Icon } from './icon';
-export { Heading } from './heading';
-export { Text } from './text';
+export * from './avatar';
+export * from './badge';
+export * from './card';
+export * from './icon';
+export * from './heading';
+export * from './text';
 //# sourceMappingURL=index.d.ts.map

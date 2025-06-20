@@ -21,24 +21,24 @@
       "types": "./dist/ui/index.d.ts"
     },
     "./ui/input": {
-      "import": "./dist/ui/input/index.mjs",
-      "require": "./dist/ui/input/index.js",
-      "types": "./dist/ui/input/index.d.ts"
+      "import": "./dist/ui/input.mjs",
+      "require": "./dist/ui/input.js",
+      "types": "./dist/ui/input.d.ts"
     },
     "./ui/feedback": {
-      "import": "./dist/ui/feedback/index.mjs",
-      "require": "./dist/ui/feedback/index.js",
-      "types": "./dist/ui/feedback/index.d.ts"
+      "import": "./dist/ui/feedback.mjs",
+      "require": "./dist/ui/feedback.js",
+      "types": "./dist/ui/feedback.d.ts"
     },
     "./ui/display": {
-      "import": "./dist/ui/display/index.mjs",
-      "require": "./dist/ui/display/index.js",
-      "types": "./dist/ui/display/index.d.ts"
+      "import": "./dist/ui/display.mjs",
+      "require": "./dist/ui/display.js",
+      "types": "./dist/ui/display.d.ts"
     },
     "./ui/navigation": {
-      "import": "./dist/ui/navigation/index.mjs",
-      "require": "./dist/ui/navigation/index.js",
-      "types": "./dist/ui/navigation/index.d.ts"
+      "import": "./dist/ui/navigation.mjs",
+      "require": "./dist/ui/navigation.js",
+      "types": "./dist/ui/navigation.d.ts"
     }
   },
   "files": [

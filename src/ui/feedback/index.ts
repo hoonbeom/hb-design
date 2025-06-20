@@ -1,4 +1,4 @@
-export { Spinner } from './spinner';
-export { Alert } from './alert';
-export { Modal } from './modal';
-export { Tooltip } from './tooltip'; 
+export * from './spinner';
+export * from './alert';
+export * from './modal';
+export * from './tooltip';

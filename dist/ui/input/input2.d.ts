@@ -10,4 +10,4 @@ export declare function Input({ className, label, error, helperText, id, ref, ..
 export declare namespace Input {
     var displayName: string;
 }
-//# sourceMappingURL=input.d.ts.map
+//# sourceMappingURL=input2.d.ts.map
