@@ -1,3 +1,3 @@
-export * as Tabs from './tabs';
-export * as Dropdown from './dropdown';
+export { Tabs, TabList, Tab, TabPanels, TabPanel } from './tabs';
+export { Dropdown, DropdownItem } from './dropdown';
 //# sourceMappingURL=index.d.ts.map

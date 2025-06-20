@@ -1,5 +1,6 @@
-export { Heading, Text } from './typography';
-export { Icon } from './icon';
-export { Card } from './card';
-export { Badge } from './badge';
 export { Avatar } from './avatar';
+export { Badge } from './badge';
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './card';
+export { Icon } from './icon';
+export { Heading } from './heading';
+export { Text } from './text';

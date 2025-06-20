@@ -1,5 +1,5 @@
-export * as Loading from './loading';
-export * as Error from './error';
-export * as Dialog from './dialog';
-export * as Tooltip from './tooltip';
+export { Spinner } from './spinner';
+export { Alert } from './alert';
+export { Modal } from './modal';
+export { Tooltip } from './tooltip';
 //# sourceMappingURL=index.d.ts.map

@@ -1,4 +1,4 @@
-export { Spinner } from './loading';
-export { Alert } from './error';
-export { Modal } from './dialog';
+export { Spinner } from './spinner';
+export { Alert } from './alert';
+export { Modal } from './modal';
 export { Tooltip } from './tooltip'; 
