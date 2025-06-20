@@ -1,8 +1,8 @@
-import { a as r, b as e, c as m } from "../index-a0c0d871.mjs";
+import { B as a, I as e, S as m } from "../index-17718195.mjs";
 import "../jsx-runtime-11ecb8bd.mjs";
 import "react";
 export {
-  r as Button,
+  a as Button,
   e as Input,
   m as Select
 };

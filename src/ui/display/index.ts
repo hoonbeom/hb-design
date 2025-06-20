@@ -1,5 +1,5 @@
-export * as Typography from './typography';
-export * as Icon from './icon';
-export * as Card from './card';
-export * as Badge from './badge';
-export * as Avatar from './avatar';
+export { Heading, Text } from './typography';
+export { Icon } from './icon';
+export { Card } from './card';
+export { Badge } from './badge';
+export { Avatar } from './avatar';

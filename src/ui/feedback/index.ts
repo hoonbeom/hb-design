@@ -1,4 +1,4 @@
-export * as Loading from './loading';
-export * as Error from './error';
-export * as Dialog from './dialog';
-export * as Tooltip from './tooltip';
+export { Spinner } from './loading';
+export { Alert } from './error';
+export { Modal } from './dialog';
+export { Tooltip } from './tooltip'; 

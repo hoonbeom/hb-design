@@ -1,2 +1,2 @@
-export * as Tabs from './tabs';
-export * as Dropdown from './dropdown';
+export { Tabs } from './tabs';
+export { Dropdown } from './dropdown';
