@@ -12,23 +12,13 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./ui/input/*": {
-      "import": "./dist/ui/input/*.mjs",
-      "types": "./dist/ui/input/*.d.ts"
-    },
-    "./ui/feedback/*": {
-      "import": "./dist/ui/feedback/*.mjs",
-      "types": "./dist/ui/feedback/*.d.ts"
-    },
-    "./ui/display/*": {
-      "import": "./dist/ui/display/*.mjs",
-      "types": "./dist/ui/display/*.d.ts"
-    },
-    "./ui/navigation/*": {
-      "import": "./dist/ui/navigation/*.mjs",
-      "types": "./dist/ui/navigation/*.d.ts"
+    "./ui": {
+      "import": "./dist/ui/index.mjs",
+      "require": "./dist/ui/index.js",
+      "types": "./dist/ui/index.d.ts"
     }
   },
   "files": [

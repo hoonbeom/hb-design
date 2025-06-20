@@ -1,3 +1,3 @@
 export { cn } from './lib/utils';
-export * from './ui';
+export * as ui from './ui';
 //# sourceMappingURL=index.d.ts.map
