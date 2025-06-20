@@ -7,19 +7,24 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      insertTypesEntry: true,
-      rollupTypes: true,
       copyDtsFiles: true,
       include: ['src/**/*'],
-      exclude: ['src/**/*.test.*', 'src/**/*.spec.*'],
+      exclude: [
+        'src/**/*.test.*',
+        'src/**/*.spec.*',
+        'src/App.tsx',
+        'src/main.tsx',
+        'src/styles.css',
+      ],
     }),
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'hb-design',
-      formats: ['es', 'cjs'],
-      fileName: (format) => `index.${format === 'es' ? 'mjs' : 'js'}`,
+      entry: {
+        // index: resolve(__dirname, 'src/index.ts'),
+        'ui/index': resolve(__dirname, 'src/ui/index.ts'),
+      },
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -28,9 +33,10 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+        preserveModules: true,
+        preserveModulesRoot: 'src',
       },
     },
-    cssCodeSplit: false,
   },
   resolve: {
     alias: {
