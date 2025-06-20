@@ -5,6 +5,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoonbeom/hb-design.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
