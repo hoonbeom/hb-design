@@ -20,6 +20,11 @@
       "require": "./dist/ui/index.js",
       "types": "./dist/ui/index.d.ts"
     },
+    "./ui/display": {
+      "import": "./dist/ui/display/index.mjs",
+      "require": "./dist/ui/display/index.js",
+      "types": "./dist/ui/display/index.d.ts"
+    },
     "./ui/input": {
       "import": "./dist/ui/input/index.mjs",
       "require": "./dist/ui/input/index.js",
@@ -30,11 +35,6 @@
       "require": "./dist/ui/feedback/index.js",
       "types": "./dist/ui/feedback/index.d.ts"
     },
-    "./ui/display": {
-      "import": "./dist/ui/display/index.mjs",
-      "require": "./dist/ui/display/index.js",
-      "types": "./dist/ui/display/index.d.ts"
-    },
     "./ui/navigation": {
       "import": "./dist/ui/navigation/index.mjs",
       "require": "./dist/ui/navigation/index.js",
@@ -44,6 +44,7 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
