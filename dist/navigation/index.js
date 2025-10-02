@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("../index-b5cde1e9.cjs");require("../utils-e1f91a2b.cjs");require("react");exports.Dropdown=e.Dropdown;exports.DropdownItem=e.DropdownItem;exports.Tab=e.Tab;exports.TabList=e.TabList;exports.TabPanel=e.TabPanel;exports.TabPanels=e.TabPanels;exports.Tabs=e.Tabs;
