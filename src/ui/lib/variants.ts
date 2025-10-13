@@ -7,8 +7,6 @@ export const typography = {
     'display-200-B': 'text-[28px] font-bold leading-[1.25]',
     'display-200-M': 'text-[28px] font-medium leading-[1.25]',
     'display-200-R': 'text-[28px] font-normal leading-[1.25]',
-    // display - 250
-    'display-250-B': 'text-[26px] font-bold leading-[1.25]',
     // display - 300
     'display-300-B': 'text-[24px] font-bold leading-[1.3]',
     'display-300-M': 'text-[24px] font-medium leading-[1.3]',
@@ -77,8 +75,6 @@ export const typography = {
     'body-400-B': 'text-[10px] font-bold leading-[1.6]',
     'body-400-M': 'text-[10px] font-medium leading-[1.6]',
     'body-400-R': 'text-[10px] font-normal leading-[1.6]',
-    // button - 50
-    'button-50-B': 'text-[18px] font-bold leading-[1.3]',
     // button - 100
     'button-100-B': 'text-[16px] font-bold leading-[1.3]',
     'button-100-M': 'text-[16px] font-medium leading-[1.3]',
